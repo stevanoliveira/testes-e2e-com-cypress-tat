@@ -12,7 +12,7 @@ jobs: # baixa as dependencias do lint
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
-      run: npm install
+      run: npm install -g --unsafe-perm=true eslint
     - name: Run ESLint
       run: npm run lint
   cypress-tests-desktop:
