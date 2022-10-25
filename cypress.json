@@ -3,6 +3,7 @@
     "experimentalSessionSupport": true,
     "chromeWebSecurity": false,
     "experimentalStudio": true,
+    "requestTimeout": 10000,
     "env": {
         "viewportWidthBreakpoint": 768
 	}
