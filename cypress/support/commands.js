@@ -13,12 +13,13 @@ Cypress.Commands.add('login', (
     { cacheSession = true } = {}
 ) => {
     const login = () => {
+        cy.intercept('GET', '**/notes').as('getNotes')
         cy.visit('/login')
         cy.get('#email').type(username)
         cy.get('#password').type(password, { log: false })
         cy.contains('button', 'Login')
             .click()
-            .wait()
+            .wait('@getNotes')
         cy.contains('h1', 'Your Notes').should('be.visible')
     }
 
