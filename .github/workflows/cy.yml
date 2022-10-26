@@ -16,12 +16,12 @@ jobs: # baixa as dependencias do lint
     - name: Run ESLint
       run: npm run lint
   cypress-tests-desktop:
-    #needs: eslint # precisa que o job anterior eslint tenha passado
+    needs: eslint # precisa que o job anterior eslint tenha passado
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
       - name: Checkout #baixa o código do workspace para o pipeline
-        uses: actions/checkout@v2 # imagem do Cypress.
+        uses: actions/checkout@v2 # imagem do Cypress
 
       - name: Run end-to-end tests on desktop viewport 🧪
         uses: cypress-io/github-action@v2
@@ -31,10 +31,7 @@ jobs: # baixa as dependencias do lint
           CYPRESS_USER_PASSWORD: ${{ secrets.CYPRESS_USER_PASSWORD }}
           CYPRESS_MAILOSAUR_SERVER_ID: ${{ secrets.CYPRESS_MAILOSAUR_SERVER_ID }}
           CYPRESS_MAILOSAUR_API_KEY: ${{ secrets.CYPRESS_MAILOSAUR_API_KEY }}
-          CYPRESS_MAILOSAUR_API_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          #GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
         with:
-        # record: true
           command: cypress run --record # o job executará o script npm test
   cypress-tests-tablet:
     needs: eslint
