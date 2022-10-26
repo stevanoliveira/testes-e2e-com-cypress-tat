@@ -9,7 +9,8 @@
     "test": "cypress run",
     "test:tablet": "cypress run --config viewportWidth=767,viewportHeight=480 --spec cypress/integration/authenticatedScenarios.spec.js",
     "lint": "eslint cypress/**/*.js",
-    "lint:fix": "eslint cypress/**/*.js --fix"
+    "lint:fix": "eslint cypress/**/*.js --fix",
+    "cy:dashboard-run": "cypress run --record"
   },
   "keywords": [],
   "author": "",
