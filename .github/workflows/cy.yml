@@ -32,7 +32,7 @@ jobs: # baixa as dependencias do lint
           CYPRESS_MAILOSAUR_SERVER_ID: ${{ secrets.CYPRESS_MAILOSAUR_SERVER_ID }}
           CYPRESS_MAILOSAUR_API_KEY: ${{ secrets.CYPRESS_MAILOSAUR_API_KEY }}
           CYPRESS_MAILOSAUR_API_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          CYPRESS_MAILOSAUR_API_KEY: ${{ secrets.GITHUB_TOKEN }
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }
         with:
           record: true
           command: cypress run --record # o job executará o script npm test
