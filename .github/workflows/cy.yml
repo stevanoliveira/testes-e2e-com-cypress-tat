@@ -21,7 +21,7 @@ jobs: # baixa as dependencias do lint
     container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
       - name: Checkout #baixa o código do workspace para o pipeline
-        uses: actions/checkout@v2 # imagem do Cypress
+        uses: actions/checkout@v2 # imagem do Cypress.
 
       - name: Run end-to-end tests on desktop viewport 🧪
         uses: cypress-io/github-action@v2
