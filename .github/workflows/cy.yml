@@ -16,7 +16,7 @@ jobs: # baixa as dependencias do lint
     - name: Run ESLint
       run: npm run lint
   cypress-tests-desktop:
-    needs: eslint # precisa que o job anterior eslint tenha passado
+    #needs: eslint # precisa que o job anterior eslint tenha passado
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
