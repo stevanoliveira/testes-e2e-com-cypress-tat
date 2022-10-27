@@ -33,7 +33,7 @@ jobs: # baixa as dependencias do lint
           CYPRESS_MAILOSAUR_API_KEY: ${{ secrets.CYPRESS_MAILOSAUR_API_KEY }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
         with:
-          command: npx cypress run # o job executará o script npm test
+          command: npm run test # o job executará o script npm test
   cypress-tests-tablet:
     needs: eslint
     runs-on: ubuntu-latest
