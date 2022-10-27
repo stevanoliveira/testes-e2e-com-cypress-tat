@@ -36,7 +36,7 @@ describe('Scenarios where authentication is a pre-requirement', () => {
         cy.visit('/')
         cy.wait('@getNotes')
 
-    
+
 
         /* ==== Generated with Cypress Studio ==== */
         cy.get('.nav > :nth-child(2) > a').click()
