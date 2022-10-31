@@ -1,8 +1,8 @@
 {
   "name": "testes-e2e-com-cypress",
   "version": "1.0.0",
-  "description": "TBD.",
-  "main": "index.js",
+  "description": "Sample project to demonstrate e2e tests written with Cypress runing on Github Actions",
+  
   "scripts": {
     "cy:open": "cypress open",
     "cy:open:tablet": "cypress open --config viewportWidth=767,viewportHeight=480",
@@ -11,7 +11,6 @@
     "lint": "eslint cypress/**/*.js",
     "lint:fix": "eslint cypress/**/*.js --fix"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
